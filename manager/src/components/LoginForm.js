@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Text } from 'react-native';
-import { Card, CardSection, Input, Button, Spinner } from './components/common';
-import { actionOnEmailChange, actionOnPassChange, actionLoginUser } from './actions';
+import { Card, CardSection, Input, Button, Spinner } from './common';
+import { actionOnEmailChange, actionOnPassChange, actionLoginUser } from '../actions';
 
 class LoginForm extends Component {
   componentWillMount() {}
