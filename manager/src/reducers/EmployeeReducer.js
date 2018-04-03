@@ -1,5 +1,5 @@
 //wiring up action types
-import { EMPLOYEE_UPDATE, EMPLOYEE_CREATED } from '../actions/types';
+import { EMPLOYEE_UPDATE, EMPLOYEE_CREATED, EMPLOYEES_FETCH_SUCCESS } from '../actions/types';
 
 const INITIAL_STATE = {
   name: '',
@@ -15,6 +15,9 @@ export default (state = INITIAL_STATE, action) => {
     case EMPLOYEE_CREATED:
       //only reset the state
       return INITIAL_STATE;
+    case EMPLOYEES_FETCH_SUCCESS:
+      console.log(action);
+      return state;
     default:
       return state;
   }
