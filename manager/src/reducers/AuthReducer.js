@@ -20,7 +20,7 @@ const INITIAL_STATE = {
   loading: false
 };
 
-export const reducerLoginForm = (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
   console.log(action);
   switch (action.type) {
     case EMAIL_CHANGED:
