@@ -11,6 +11,7 @@ class EmployeeCreate extends Component {
     const { name, phone, shift } = this.props;
     this.props.actionOnEmployeeCreate({ name, phone, shift: shift || 'Monday' });
   }
+
   render() {
     return (
       <Card>
@@ -63,7 +64,7 @@ class EmployeeCreate extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onClickListener={this.onSubmitPress()}>Create</Button>
+          <Button onClickListener={this.onSubmitPress.bind(this)}>Create</Button>
         </CardSection>
       </Card>
     );
