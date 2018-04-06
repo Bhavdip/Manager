@@ -4,7 +4,8 @@ import { EMPLOYEE_UPDATE, EMPLOYEE_CREATED, EMPLOYEES_FETCH_SUCCESS } from '../a
 const INITIAL_STATE = {
   name: '',
   phone: '',
-  shift: ''
+  shift: '',
+  employeesList: []
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -16,8 +17,7 @@ export default (state = INITIAL_STATE, action) => {
       //only reset the state
       return INITIAL_STATE;
     case EMPLOYEES_FETCH_SUCCESS:
-      console.log(action);
-      return state;
+      return { ...state, employeesList: action.payload };
     default:
       return state;
   }

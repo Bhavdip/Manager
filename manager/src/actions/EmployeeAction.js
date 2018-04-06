@@ -45,7 +45,7 @@ export const employeesFetch = () => {
         console.log(snapshot.value);
         dispatch({
           type: EMPLOYEES_FETCH_SUCCESS,
-          payload: snapshot.value
+          payload: snapshot.val()
         });
       });
   };
